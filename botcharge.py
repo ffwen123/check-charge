@@ -65,7 +65,7 @@ class BotCharge(Plugin):
             # itchat.send("@msg@ 测试主动发消息成功", toUserName=user_id)
             logger.info("[RP] check User result, result={}".format(check_perm.text))
             if check_perm.json().get("result") != "1":
-            # if check_perm.json().get("result") in ["0", "-1"]:
+                # if check_perm.json().get("result") in ["0", "-1"]:
                 # 返回付款连接
                 reply.type = ReplyType.TEXT
                 reply.content = self.check_count + "\n" + self.pay_url.format(self.agent_id)
