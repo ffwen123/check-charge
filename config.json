@@ -1,0 +1,6 @@
+{
+  "check_url": "http://127.0.0.1:6089/check-user",
+  "charge_url": "http://127.0.0.1:6089/user-charge",
+  "pay_url": "http://visbus.aigcopen.com/order/pay?agent_id={}",
+  "check_count": "您今天的体验次数已用完，请付费充值~"
+}

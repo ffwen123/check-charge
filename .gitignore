@@ -4,7 +4,6 @@ __pycache__/
 *$py.class
 .idea
 .vscode
-test.py
 config.json
 nohup.out
 tmp
