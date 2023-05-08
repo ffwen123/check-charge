@@ -1,5 +1,6 @@
 {
   "check_url": "校验权限接口",
-  "pay_url": "付费连接?bot_id={}",
-  "check_count": "今天的次数已用完，请明天再用"
+  "charge_url": "扣费接口或减次数接口",
+  "pay_url": "付费连接?agent_id={}",
+  "check_count": "您今天的体验次数已用完，请付费充值~"
 }
