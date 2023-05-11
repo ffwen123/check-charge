@@ -37,6 +37,8 @@ class BotCharge(Plugin):
                 self.pay_url = config["pay_url"]
                 self.charge_url = config["charge_url"]
                 self.check_count = config["check_count"]
+                if config.get("auth_agent_id", ""):
+                    self.agent_id = config["auth_agent_id"]
                 if not self.check_url:
                     raise Exception("please set your check_url in config or environment variable.")
             self.handlers[Event.ON_HANDLE_CONTEXT] = self.on_handle_context
