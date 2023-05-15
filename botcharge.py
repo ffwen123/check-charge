@@ -69,7 +69,7 @@ class BotCharge(Plugin):
             if check_perm.json().get("result") != "1":
                 # if check_perm.json().get("result") in ["0", "-1"]:
                 # 返回付款连接
-                reply.type = ReplyType.TEXT
+                reply.type = ReplyType.INFO
                 reply.content = self.check_count + "\n" + self.pay_url.format(self.agent_id)
                 e_context.action = EventAction.BREAK_PASS  # 事件结束后，跳过处理context的默认逻辑
                 e_context['reply'] = reply
@@ -90,7 +90,7 @@ class BotCharge(Plugin):
             e_context.action = EventAction.BREAK
 
     def on_decorate_reply(self, e_context: EventContext):
-        if e_context["reply"].type in [ReplyType.TEXT, ReplyType.VOICE]:
+        if e_context["reply"].type in [ReplyType.TEXT, ReplyType.VOICE, ReplyType.IMAGE, ReplyType.IMAGE_URL]:
             if e_context["reply"].content:
                 try:
                     user_id = e_context['context']["msg"].from_user_id
